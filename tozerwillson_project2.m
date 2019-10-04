@@ -1,56 +1,20 @@
 % Project 2
 
-% line 1 data
-data1 = dlmread('line1-1.txt');
+% line data
+data = dlmread('line3.txt');
+target_box = data(1:2);
+box_size = data(3);
+point = data(4:5);
+vec = data(6:7);
 
-target_box1 = data1(1:2);
+% Draw target box
+x1 = target_box(1);
+x2 = target_box(1) + box_size;
+y1 = target_box(2);
+y2 = target_box(2) + box_size;
+x = [x1, x2, x2, x1, x1];
+y = [y1, y1, y2, y2, y1];
+plot(x, y, 'b-');
+hold on;
 
-box_size1 = data1(3);
-
-point1 = data1(4:5);
-
-vec1 = data1(6:7);
-
-% line 2 data
-data2 = dlmread('line2.txt');
-
-target_box2 = data2(1:2);
-
-box_size2 = data2(3);
-
-point2 = data2(4:5);
-
-vec2 = data2(6:7);
-
-% line 3 data
-data3 = dlmread('line3.txt');
-
-target_box3 = data3(1:2);
-
-box_size3 = data3(3);
-
-point3 = data3(4:5);
-
-vec3 = data3(6:7);
-
-% line 4 data
-data4 = dlmread('line4.txt');
-
-target_box4 = data4(1:2);
-
-box_size4 = data4(3);
-
-point4 = data4(4:5);
-
-vec4 = data4(6:7);
-
-% line 5 data
-data5 = dlmread('line5.txt');
-
-target_box5 = data5(1:2);
-
-box_size5 = data5(3);
-
-point5 = data5(4:5);
-
-vec5 = data5(6:7);
+% Draw line
