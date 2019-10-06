@@ -26,7 +26,7 @@ hold on;
 t =linspace(-box_size/2, box_size/2);
 v = point(1) + t * vec(1);
 w = point(2) + t * vec(2);
-plot(w,v, 'Color', 'b', 'LineStyle', ':');
+plot(v,w, 'Color', 'b', 'LineStyle', ':');
 
 %Creates a rectangle that displays the target box.
 rectangle('Position',[target_box(1), target_box(2), box_size, box_size], 'EdgeColor','r', 'LineStyle','--');
