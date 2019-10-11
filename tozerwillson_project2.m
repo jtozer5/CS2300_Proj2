@@ -15,7 +15,7 @@ disp('Project 2')
 
 %Gets the numbers from the text file and saves the target box lower left coordinate, 
 %target box size, and information describing a line in parametric form.
-data = dlmread('line3.txt');
+data = dlmread('line4.txt');
 target_box = data(1:2);
 box_size = data(3);
 point = data(4:5);
@@ -23,7 +23,7 @@ vec = data(6:7);
 
 %Uses the parametric equation of a line to display the line to the user.
 hold on;
-t =linspace(-box_size/2, box_size/2);
+t = linspace(-box_size/2, box_size/2);
 v = point(1) + t * vec(1);
 w = point(2) + t * vec(2);
 plot(v,w, 'Color', 'b', 'LineStyle', ':');
